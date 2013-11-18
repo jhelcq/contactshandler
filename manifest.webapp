@@ -1,0 +1,28 @@
+{
+    "type": "privileged",
+    "version": "1.0",
+    "name": "HandlerContacts! App",
+    "launch_path": "/index.html",
+    "description": "Aplicacion que muestra los contactos del usuario",
+    "icons": {
+        "16": "/images/logo16.png",
+        "32": "/images/logo32.png",
+        "48": "/images/logo48.png",
+        "64": "/images/logo64.png",
+        "128": "/images/logo128.png"
+    },
+    "developer": {
+        "name": "jhelcq",
+        "url": "http://www.jhecq.org"
+    },
+    "installs_allowed_from": ["*"],
+    "permissions": {        
+        "contacts": {
+            "description" : "Leer y modificar tus contactos",
+            "access": "readwrite"
+        },
+        "geolocation": {
+          "description": "Deseamos saber donde estas"
+        }
+    }
+}

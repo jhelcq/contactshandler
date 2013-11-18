@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mis contactos</title>
+    </head>
+    <meta charset="utf-8"/>
+    
+    <link rel="stylesheet" type="text/css" href="css/gaia/min/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/gaia/min/css/input_areas_min.css">
+    <link rel="stylesheet" type="text/css" href="css/gaia/min/css/confirm_min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloAdicional.css">
+<body>
+    <div id='primeraPantalla' class='pantalla'>
+        <header><h1>Mis contactos</h1></header>
+        <section id='contenidoPrimeraPantalla'>
+        </section>
+        <footer id='footerPrimeraPantalla' class='footer'><div id='nuevo'>Nuevo</div><div id='borrarTodos'>Borrar Todos</div></footer>
+        <form id='notificacionListaContactos' role="dialog" onsubmit="return false;">
+            <section>
+              <h1>Mensaje</h1>
+              <p id='texto'></p>
+            </section>
+            <menu>
+              <button id='aceptar' class="recommend">Aceptar</button>
+            </menu>
+        </form>
+    </div>
+
+    <div id='segundaPantalla' class='pantalla'>
+        <header><h1>Adición de contacto</h1></header>
+        <section id= 'contenidoSegundaPantalla'>
+            <form>
+                <p>
+                    <input type="text" id='nombre' placeholder="Nombre" required>
+                    <button type="reset">Clear</button>
+                </p>
+                <p>
+                    <input type="text" id='telefono' placeholder="Telefono" required>
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
+        </section>
+        <footer id='footerSegundaPantalla' class='footer' ><div id='adicionar'>Adicionar</div><div id='regresar'>Regresar</div></footer>
+        <form id='notificacionDatosInvalidos' role="dialog" onsubmit="return false;">
+            <section>
+              <h1>Alerta</h1>
+              <p id='texto'></p>
+            </section>
+            <menu>
+              <button id='aceptar' class="recommend">Aceptar</button>
+            </menu>
+        </form>
+        <form id='notificacionOperacionAdicion' role="dialog" onsubmit="return false;">
+            <section>
+              <h1></h1>
+              <p id='texto'></p>
+            </section>
+            <menu>
+              <button id='aceptar' class="recommend">Aceptar</button>
+            </menu>
+        </form>
+    </div>
+</body>
+</html>
+
+    <script id='plantillaContenidoContactos' type="text/x-handlebars-template">
+        {{#each this}}
+            <article>
+                <h2>{{nombre}}</h2>
+                <h3>{{telefono}}</h3>
+            </article>
+        {{/each}}
+    </script>
+
+    <script type="text/javascript" src="js/librerias/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/librerias/underscore-min.js"></script>
+    <script type="text/javascript" src="js/librerias/backbone-min.js"></script>
+    <script type="text/javascript" src="js/librerias/handlebars.js"></script>
+    <script type="text/javascript" src="js/Contacto.js"></script>
+    <script type="text/javascript" src="js/Contactos.js"></script>
+    <script type="text/javascript" src="js/ClienteContactos.js"></script>
+    <script type="text/javascript" src="js/webapp.js"></script>    

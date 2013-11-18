@@ -1,0 +1,7 @@
+#segundaPantalla, #notificacionListaContactos, #notificacionDatosInvalidos, #notificacionOperacionAdicion{
+    display: none;
+}
+
+#notificacionListaContactos section, #notificacionDatosInvalidos section, #notificacionOperacionAdicion section{
+    text-align: left;
+}
